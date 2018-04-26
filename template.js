@@ -1,11 +1,15 @@
 
 //templateJS 
-//A library for dynamically making and changing the template of a webpage
+//A library for dynamically making and changing the templates & elements of a webpage
 // By Steven Williams
 
 template = {
 
     make: el => document.createElement(el),
     add:  (parent, child) => parent.appendChild(child),
-    place: el => { template.add("body", el); }
+    place: el => { template.add("body", el); },
+    list: (arr, type) => { 
+       let lst =  template.make(type);
+        a.forEach( item => template.add(lst, item) );
+    }
 }
