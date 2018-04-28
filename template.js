@@ -12,7 +12,12 @@ template = {
         if (type !== "ul" && type !== "ol"){
             return false;
         }
+        var tmp;
        let lst =  template.make(type);
-        a.forEach( item => template.add(lst, item) );
+        a.forEach( item => {
+            tmp = template.make("li"); 
+            template.add(tmp, item); //todo test this
+            template.add(lst, tmp);
+        } );
     }
 }
