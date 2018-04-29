@@ -8,6 +8,12 @@ template = {
     make: el => document.createElement(el),
     add:  (parent, child) => parent.appendChild(child),
     place: el => { template.add("body", el); },
+
+    el: (prnt, elem) => { 
+        let m = template.make(el);
+        template.add(prnt, m);
+        },
+
     list: (arr, type) => { 
         if (type !== "ul" && type !== "ol"){
             return false;
