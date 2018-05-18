@@ -9,7 +9,7 @@
     <body>
 
         <div id="calc" >
-        <div id="result"></div>
+        <div id="result">{{Octets}}</div>
 
         <button :click="SquareTable" >3 digit ends of squares</button>
 
@@ -20,11 +20,22 @@
                 el:"#calc",
                 methods:{
                     SquareTable:function(){
-                        var Octets = [];
+                        
                         for (var i = 1; i < 126; i++){
                             Octets[0] = Math.pow(i, 2);
-                            //todo continue
+                            //todo replace with loop
+                            Octets[1] = Math.pow(250 - i, 2);
+                            Octets[2] = Math.pow(250 + i, 2);
+                            Octets[3] = Math.pow(500 - i, 2);
+                            Octets[4] = Math.pow(500 + i, 2);
+                            Octets[5] = Math.pow(750 - i, 2);
+                            Octets[6] = Math.pow(750 + i, 2);
+                            Octets[7] = Math.pow(1000 - i, 2);
+
                         }
+                    },
+                    data:{
+                        Octets: [];
                     }
                 }
             });
