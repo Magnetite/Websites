@@ -9,7 +9,7 @@
     <body>
 
         <div id="calc" >
-        <div id="result">{{Octets}}</div>
+        <div id="result">{{OutArr}}</div>
 
         <button :click="SquareTable" >3 digit ends of squares</button>
 
@@ -19,6 +19,7 @@
             var calc = new vue({
                 el:"#calc",
                 methods:{
+                    var Octets = [];
                     SquareTable:function(){
                         
                         for (var i = 1; i < 126; i++){
@@ -33,9 +34,11 @@
                             Octets[7] = Math.pow(1000 - i, 2);
 
                         }
+
+                        
                     },
                     data:{
-                        Octets: [];
+                        OutArr: []
                     }
                 }
             });
