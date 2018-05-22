@@ -25,16 +25,18 @@
                     var Octets = [];
                     SquareTable:function(){
                         
-                        for (var i = 1; i < 126; i++){
-                            Octets[0] = Math.pow(i, 2) + " ";
+                        for (var i = 1; i < 125; i++){
+                            Octets[i] = Math.pow(i, 2) + " ";
                             //todo replace with loop
-                            Octets[0] += Math.pow(250 - i, 2) + " ";
-                            Octets[0] += Math.pow(250 + i, 2) + " ";
-                            Octets[0] += Math.pow(500 - i, 2) + " ";
-                            Octets[0] += Math.pow(500 + i, 2) + " ";
-                            Octets[0] += Math.pow(750 - i, 2) + " ";
-                            Octets[0] += Math.pow(750 + i, 2) + " ";
-                            Octets[0] += Math.pow(1000 - i, 2) + " ";
+                            Octets[i] += Math.pow(250 - i, 2) + " ";
+                            Octets[i] += Math.pow(250 + i, 2) + " ";
+                            Octets[i] += Math.pow(500 - i, 2) + " ";
+                            Octets[i] += Math.pow(500 + i, 2) + " ";
+                            Octets[i] += Math.pow(750 - i, 2) + " ";
+                            Octets[i] += Math.pow(750 + i, 2) + " ";
+                            Octets[i] += Math.pow(1000 - i, 2) + " ";
+
+                          
 
                         }
 
