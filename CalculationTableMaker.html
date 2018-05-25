@@ -14,7 +14,7 @@
             </ol>
         
 
-        <button :click="SquareTable" >3 digit ends of squares</button>
+        <button v-on:click="SquareTable" >3 digit ends of squares</button>
 
         </div>
 
@@ -27,22 +27,26 @@
                     },
                 methods:{
                     
-                    SquareTable:function(){
+                    SquareTable: function(){
                         
-                        for (var i = 1; i < 125; i++){
-                            Octets[i] = Math.pow(i, 2) + " ";
+                        var tmp = "";
+                        for (var i = 0; i < 125; i++){
+                            tmp = Math.pow(i, 2) + " ";
                             //todo replace with loop
-                            Octets[i] += Math.pow(250 - i, 2) + " ";
-                            Octets[i] += Math.pow(250 + i, 2) + " ";
-                            Octets[i] += Math.pow(500 - i, 2) + " ";
-                            Octets[i] += Math.pow(500 + i, 2) + " ";
-                            Octets[i] += Math.pow(750 - i, 2) + " ";
-                            Octets[i] += Math.pow(750 + i, 2) + " ";
-                            Octets[i] += Math.pow(1000 - i, 2) + " ";
+                            tmp += Math.pow(250 - i, 2) + " ";
+                            tmp += Math.pow(250 + i, 2) + " ";
+                            tmp += Math.pow(500 - i, 2) + " ";
+                            tmp += Math.pow(500 + i, 2) + " ";
+                            tmp += Math.pow(750 - i, 2) + " ";
+                            tmp += Math.pow(750 + i, 2) + " ";
+                            tmp += Math.pow(1000 - i, 2) + " ";
+
+                            Octets[i] = tmp;
 
                           
 
                         }
+                        console.log(Octets);
 
                         
                     }
