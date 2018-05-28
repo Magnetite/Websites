@@ -9,32 +9,34 @@
     <body>
 
         <div id="calc" >
+
+                <button @click="SquareTable" >3 digit ends of squares</button>
+
             <ol>
-                <li v-for="x in Octets"></li>
+                {{Octets}}
             </ol>
 
-            {{Octets}}
         
 
-        <button v-on:click="SquareTable" >3 digit ends of squares</button>
+       
 
         </div>
 
         <script>
 
-            var Octets = [];
+            var Octets = {1:"test"};
             var calc = new Vue({
                 el:"#calc",
 
                 data:{
-                        Octets: []
+                        Octets
                     },
                 methods:{
                     
                     SquareTable: function(){
                         
                         var tmp = "";
-                        for (var i = 0; i < 125; i++){
+                        for (var i = 1; i < 125; i++){
                             tmp = Math.pow(i, 2) + " ";
                             //todo replace with loop
                             tmp += Math.pow(250 - i, 2) + " ";
