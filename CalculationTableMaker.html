@@ -13,7 +13,7 @@
                 <button @click="SquareTable" >3 digit ends of squares</button>
 
             <ol>
-                {{Octets}}
+               <li v-for="x in Octets">{{x}}</li>
             </ol>
 
         
@@ -24,7 +24,8 @@
 
         <script>
 
-            var Octets = {1:"test"};
+           var Octets = {1:"test"};
+           
             var calc = new Vue({
                 el:"#calc",
 
