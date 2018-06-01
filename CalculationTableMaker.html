@@ -12,9 +12,9 @@
 
                 <button @click="SquareTable" >3 digit ends of squares</button>
 
-            <ol>
-               <li v-for="x in Octets">{{x}}</li>
-            </ol>
+            
+               <table v-html="Octets">{{Octets}}</table>
+            
 
         
 
@@ -24,7 +24,7 @@
 
         <script>
 
-           var Octets = {1:"test"};
+           var Octets = {1:"0"};
            
             var calc = new Vue({
                 el:"#calc",
@@ -38,15 +38,15 @@
                         
                         var tmp = "";
                         for (var i = 1; i < 125; i++){
-                            tmp = Math.pow(i, 2) + " ";
+                            tmp = "<tr><td>" + Math.pow(i, 2) + "</td> ";
                             //todo replace with loop
-                            tmp += Math.pow(250 - i, 2) + " ";
-                            tmp += Math.pow(250 + i, 2) + " ";
-                            tmp += Math.pow(500 - i, 2) + " ";
-                            tmp += Math.pow(500 + i, 2) + " ";
-                            tmp += Math.pow(750 - i, 2) + " ";
-                            tmp += Math.pow(750 + i, 2) + " ";
-                            tmp += Math.pow(1000 - i, 2) + " ";
+                            tmp += "<td>" + Math.pow(250 - i, 2) + "</td> ";
+                            tmp += "<td>" + Math.pow(250 + i, 2) + "</td> ";
+                            tmp += "<td>" + Math.pow(500 - i, 2) + "</td> ";
+                            tmp += "<td>" + Math.pow(500 + i, 2) + "</td> ";
+                            tmp += "<td>" + Math.pow(750 - i, 2) + "</td> ";
+                            tmp += "<td>" + Math.pow(750 + i, 2) + "</td> ";
+                            tmp += "<td>" +Math.pow(1000 - i, 2) + "</td></tr> ";
 
                             Octets[i] = tmp;
 
