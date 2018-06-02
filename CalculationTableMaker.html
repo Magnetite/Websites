@@ -12,9 +12,9 @@
 
                 <button @click="SquareTable" >3 digit ends of squares</button>
 
-            
-               <table v-html="Octets">{{Octets}}</table>
-            
+            <ol>
+               <li v-for="x in Octets">{{x}}</li>
+            </ol>
 
         
 
@@ -38,15 +38,15 @@
                         
                         var tmp = "";
                         for (var i = 1; i < 125; i++){
-                            tmp = "<tr><td>" + Math.pow(i, 2) + "</td> ";
+                            tmp = Math.pow(i, 2) + " ";
                             //todo replace with loop
-                            tmp += "<td>" + Math.pow(250 - i, 2) + "</td> ";
-                            tmp += "<td>" + Math.pow(250 + i, 2) + "</td> ";
-                            tmp += "<td>" + Math.pow(500 - i, 2) + "</td> ";
-                            tmp += "<td>" + Math.pow(500 + i, 2) + "</td> ";
-                            tmp += "<td>" + Math.pow(750 - i, 2) + "</td> ";
-                            tmp += "<td>" + Math.pow(750 + i, 2) + "</td> ";
-                            tmp += "<td>" +Math.pow(1000 - i, 2) + "</td></tr> ";
+                            tmp += Math.pow(250 - i, 2) + " ";
+                            tmp += Math.pow(250 + i, 2) + " ";
+                            tmp += Math.pow(500 - i, 2) + " ";
+                            tmp += Math.pow(500 + i, 2) + " ";
+                            tmp += Math.pow(750 - i, 2) + " ";
+                            tmp += Math.pow(750 + i, 2) + " ";
+                            tmp += Math.pow(1000 - i, 2) + " ";
 
                             Octets[i] = tmp;
 
