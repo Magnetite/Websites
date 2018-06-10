@@ -11,26 +11,30 @@
         <div id="calc" >
 
                 <button @click="SquareTable" >3 digit ends of squares</button>
+                <button @click="Century" >Century Value</button>
 
             <ol>
                <li v-for="x in Octets">{{x}}</li>
+               <li v-for="x in Cen">{{x}}</li>
             </ol>
 
         
+            </div>
 
-       
 
-        </div>
+            
 
         <script>
 
            var Octets = {1:"0"};
+           var Cen = {"00":"0"};
            
             var calc = new Vue({
                 el:"#calc",
 
                 data:{
-                        Octets
+                        Octets,
+                        Cen
                     },
                 methods:{
                     
@@ -56,7 +60,18 @@
                         console.log(Octets);
 
                         
+                    },
+
+                Century: function(){
+                    var tmp = 0;
+
+                    for (var i = 0; i < 10; i++){
+                        for (var j = 0; j < 10; j++){
+                            tmp = (i * 10) + j;
+                            Cen[i + j + ""] = ( tmp % 7) + Math.floor(tmp/4) % 7; //check this line
+                        }
                     }
+                }
                     
                 }
             });
