@@ -15,7 +15,7 @@
 
             <ol>
                <li v-for="x in Octets">{{x}}</li>
-               <li v-for="x in Cen">{{x}}</li>
+               <li v-for="y in Cen">{{y}}</li>
             </ol>
 
         
@@ -57,7 +57,7 @@
                           
 
                         }
-                        console.log(Octets);
+                        
 
                         
                     },
@@ -68,7 +68,7 @@
                     for (var i = 0; i < 10; i++){
                         for (var j = 0; j < 10; j++){
                             tmp = (i * 10) + j;
-                            Cen[i + j + ""] = ( tmp % 7) + Math.floor(tmp/4) % 7; //check this line
+                            Cen[i + j + ""] = ( ( tmp % 7) + Math.floor(tmp/4) % 7 ); //check this line
                         }
                     }
                 }
