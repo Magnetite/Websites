@@ -3,17 +3,39 @@
     <head>
         <title> Base 60 Calculation Game</title>
 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <!-- Add Vue -->
         <script src="https://unpkg.com/vue@2.1.10/dist/vue.js"></script>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+    
+
     </head>
     <body>
 
-        <div></div>
+        <div id="game">
+            <div class="jumbotron">
+                <div></div>
+            </div> 
+
+            <textarea></textarea>
+            <textarea></textarea>
+        
+        </div>
 
             
 
         <script>
-
+            var game60 = new vue({
+                el:"#game",
+                methods:{
+                    
+                }
+            });
      
         </script>
     </body>
