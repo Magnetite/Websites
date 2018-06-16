@@ -42,8 +42,26 @@
                 methods:{
 
                     Add: function(a, b){
+                        var out = [];
                         var tmp = 0;
+
+                        //Check for correct range
+                        if  (a < 0 || b < 0 || a > 59 || b > 59){
+                            return false;
+                        }
                         
+                        tmp = a + b;
+
+                        out[1] = tmp % 60;
+
+                        if (tmp > 59){
+                            out[0] = 1;
+                        } else {
+                            out[0] = 0;
+                        }
+
+                        return out;
+
                     }
                     
                 }
