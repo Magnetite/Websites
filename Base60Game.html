@@ -66,9 +66,30 @@
 
                     Sub: function(a, b){
 
-                        //check "this"
+                        //todo check "this"
                         this.Add(a, b * -1);
-                    }
+                    },
+
+                    Mult: function(a, b){
+                        var out = [];
+                        var tmp = 0;
+
+                        //Check for correct range
+                        if  (a < 0 || b < 0 || a > 59 || b > 59){
+                            return false;
+                        }
+                        
+                        tmp = a * b;
+
+                        out[1] = tmp % 60;
+
+                        out[0] = Math.floor(tmp/60);
+
+                        return out;
+
+                    },
+
+
                     
                 }
             });
