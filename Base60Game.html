@@ -93,9 +93,21 @@
                         var out = [];
                         var tmp = 0;
 
+                    
+                        
+
                         tmp = a / b;
 
-                        
+
+                    },
+
+                    Chk: function(a, b){
+                        //Check for correct range
+                        if  (a < 0 || b < 0 || a > 59 || b > 59){
+                            return false;
+                        }
+
+                        return true;
                     }
 
 
