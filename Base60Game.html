@@ -46,7 +46,7 @@
                         var tmp = 0;
 
                         //Check for correct range
-                        if  (a < 0 || b < 0 || a > 59 || b > 59){
+                        if (this.Chk() === false ){
                             return false;
                         }
                         
@@ -75,7 +75,7 @@
                         var tmp = 0;
 
                         //Check for correct range
-                        if  (a < 0 || b < 0 || a > 59 || b > 59){
+                        if (this.Chk() === false ){
                             return false;
                         }
                         
@@ -93,7 +93,10 @@
                         var out = [];
                         var tmp = 0;
 
-                    
+                        //Check for correct range
+                        if (this.Chk() === false ){
+                            return false;
+                        }
                         
 
                         tmp = a / b;
