@@ -118,9 +118,15 @@
                     },
 
                     Rnd: function(){
+                        var out = [];
 
-                        //return Ints from 0 to 59
-                        return Math.random(60);
+                        for (var i = 0; i < 4; i++){
+                            //return Ints from 0 to 59
+                            out[i] = Math.random(60);
+
+                        }
+
+                        return out;
                     }
 
 
