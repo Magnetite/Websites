@@ -130,7 +130,12 @@
                     },
 
                     Translate: function(a){
-                        return a[0] * 60 + a[1];  //todo: fix this
+                        var out = 0;
+                        for (var i = 0, len = a.length; i < len; i++){
+                            out += a[i] * Math.pow(60, len - i);
+                        }
+
+                        return out;  //todo: check method
                     }
 
 
