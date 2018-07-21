@@ -117,6 +117,19 @@
                         return true;
                     },
 
+                    ArrChk: function(arr1, arr2){
+
+                        
+
+                        for ( var i = 0, len1 = arr1.length, len2 = arr2.length; i < len; i++ ){
+                            //Check for correct range in array
+                            if  (this.Chk(arr1[i], arr2[i]) === false){
+                                return false;  //todo: check the this.Chk method call, 
+                            }
+                        }
+                        return true;
+                    },
+
                     Rnd: function(a){
                         var out = [];
 
