@@ -46,7 +46,7 @@
                         var tmp = 0;
 
                         //Check for correct range
-                        if (this.Chk() === false ){
+                        if (this.Chk(a, b) === false ){
                             return false;
                         }
                         
@@ -164,7 +164,7 @@
                     Sqrt: function(a){
                         var out = this.ToTen(a);
 
-                        return this.Translate(Math.sqrt(out) );  //todo: check "this"
+                        return this.Translate(Math.sqrt(out) );  
                     }
 
                     
