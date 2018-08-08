@@ -7,11 +7,11 @@ template = {
 
     make: el => document.createElement(el),
     add:  (parent, child) => parent.appendChild(child),
-    place: el => { template.add("body", el); },
+    place: el => { this.add("body", el); },
 
     el: (prnt, elem) => { 
-        let m = template.make(el);
-        template.add(prnt, m);
+        let m = this.make(el);
+        this.add(prnt, m);
         },
 
     list: (arr, type) => { 
@@ -19,11 +19,11 @@ template = {
             return false;
         }
         var tmp;
-       let lst =  template.make(type);
+       let lst =  this.make(type);
         a.forEach( item => {
-            tmp = template.make("li"); 
-            template.add(tmp, item); //todo test this
-            template.add(lst, tmp);
+            tmp = this.make("li"); 
+            this.add(tmp, item); //todo test this
+            this.add(lst, tmp);
         } );
     }
 }
