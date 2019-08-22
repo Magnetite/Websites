@@ -11,6 +11,11 @@
 </title>
 
 <script>
+        <script src="jquery-3.4.1.min.js"></script>
+        
+</script>
+
+<script>
 
 /* 
 Things to be done:
@@ -24,8 +29,30 @@ Things to be done:
 
 
 */
+
+//template for a div block,  other code will add various properties
+var block = "<div></div>";
+
+// Generate a pseudorandom integer up to n
+function rndm(n){
+    return Math.rnd(Math.random() * n);
+
+}
+
+$(document).ready(function(){
+
+    var d = rndm(10);  //<= HARD CODED INTEGER HERE!  Fix.  ---------------------------------------------------------------
+
+    //Append a random number of div blocks 
+    for (var i = 0; i < d; i++){
+        $("#bounce").append(block);
+    }
+    
+});
    
 </script>
+
+
 
 <style>
 </style>
