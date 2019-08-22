@@ -43,9 +43,9 @@ $(document).ready(function(){
 
     var d = rndm(10);  //<= HARD CODED INTEGER HERE!  Fix.  ---------------------------------------------------------------
 
-    //Append a random number of div blocks 
+    //Append a random number of div blocks and a numbered class
     for (var i = 0; i < d; i++){
-        $("#bounce").append(block);
+        $("#bounce").append(block).addClass("" + d);
     }
     
 });
