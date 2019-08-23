@@ -10,10 +10,9 @@
     Bouncing Bubbles background
 </title>
 
-<script>
-        <script src="jquery-3.4.1.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         
-</script>
 
 <script>
 
@@ -35,7 +34,7 @@ var block = "<div></div>";
 
 // Generate a pseudorandom integer up to n
 function rndm(n){
-    return Math.rnd(Math.random() * n);
+    return Math.round(Math.random() * n);
 
 }
 
@@ -62,7 +61,7 @@ $(document).ready(function(){
     #bounce > div {
         border-radius: 100%;
         border-color: red;  /* red is the default color for testing, before I make the color random */
-        opacity: 0;  /* make bady of div transparent */
+        opacity: 0.2;  /* make bady of div transparent */
     }
 </style>
 
