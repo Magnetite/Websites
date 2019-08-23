@@ -41,11 +41,14 @@ function rndm(n){
 
 $(document).ready(function(){
 
+    var size = 20;
     var d = rndm(10);  //<= HARD CODED INTEGER HERE!  Fix.  ---------------------------------------------------------------
 
     //Append a random number of div blocks and a numbered class
     for (var i = 0; i < d; i++){
-        $("#bounce").append(block).addClass("" + d);
+        size = rndm(300);
+        
+        $("#bounce").append(block).addClass("" + d).css("width", size ).css("height", size );
     }
     
 });
@@ -58,6 +61,8 @@ $(document).ready(function(){
 
     #bounce > div {
         border-radius: 100%;
+        border-color: red;  /* red is the default color for testing, before I make the color random */
+        opacity: 0;  /* make bady of div transparent */
     }
 </style>
 
