@@ -48,7 +48,8 @@ $(document).ready(function(){
         size = rndm(300);
         
         $("#bounce").prepend(block).addClass("" + d)
-        $("#bounce > div").first().css("width", size ).css("height", size ); 
+        $("#bounce > div").first().css("width", size ).css("height", size ).css("border", "4px solid #" + rndm(99) + rndm(99) + rndm(99) ); 
+
     }
     
 });
@@ -62,7 +63,7 @@ $(document).ready(function(){
     #bounce > div {
         border-radius: 100%;
         border: 4px solid red;  /* red is the default color for testing, before I make the color random */
-        opacity: 0.1;  /* make bady of div transparent */
+        opacity: 0.3;  /* make bady of div transparent */
     }
 </style>
 
