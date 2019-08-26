@@ -41,26 +41,36 @@ function rndm(n){
 $(document).ready(function(){
 
     var size = 20;
+    var tp, lft;
     var d = rndm(10);  //<= HARD CODED INTEGER HERE!  Fix.  ---------------------------------------------------------------
 
     //Append a random number of div blocks and a numbered class
     for (var i = 0; i < d; i++){
         size = rndm(300);
+        tp = rndm(300);  //<= todo: remove hard coded number
+        lft = rndm(300); //<= todo: remove hard coded number
         
-        $("#bounce").prepend(block).addClass("" + i)
-        $("#bounce > div").first().css("width", size ).css("height", size ).css("border", "4px solid #" + rndm(256).toString(16) + rndm(256).toString(16) + rndm(256).toString(16) ); 
+        $("#bounce").prepend(block).addClass("" + i);
+        $("#bounce > div").first().css("width", size ).css("height", size ).css("border", "4px solid #" + rndm(256).toString(16) + rndm(256).toString(16) + rndm(256).toString(16) )
+        .offset( { top:tp, left:lft }); 
         
     }
     
 });
 
 // $("#bounce > div").first().animate({left: rndm(300)  + "px", top: rndm(300)  + "px"});
+
+
    
 </script>
 
 
 
 <style>
+
+    body{
+        absolute
+    }
 
     #bounce > div {
         border-radius: 100%;
